@@ -1,0 +1,29 @@
+.navbar-toggler {
+  color: #510000;
+  border: 2px solid #510000;
+}
+
+.navbar-toggler span {
+  color: #510000;
+
+}
+
+li {
+  text-align: center;
+}
+
+nav{
+  background-color: chocolate;
+}
+
+.navbar a{
+  font-weight: 600;
+  color: #510000;
+}
+
+@media(min-width: 992px) {
+  #navbarNav {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

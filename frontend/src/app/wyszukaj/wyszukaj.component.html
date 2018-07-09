@@ -1,0 +1,48 @@
+<h1 class="display-4">Wyszukaj przepisy</h1>
+
+
+<div class="form-group" style="text-align:end; margin-right: 8%;">
+  <button type="button" class="btn" (click)="cofnij()">Cofnij</button>
+</div>
+
+<div class="row">
+  <div class="col">
+    <h3>Wyszukaj przepisy po ich składnikach</h3>
+      <div class="col-12" style="padding:20px; background-color:chocolate; margin: 0 3%; border-radius:15px; border: 2px solid #510000;
+-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
+      <form (ngSubmit)="search()">
+          <div class="form-group">
+            <label for="">Składniki (wpisywane po przecinku bez spacji np. mąka,mleko...)</label>
+            <!--<ul>
+              <li style="list-style-type: decimal; color: #510000;">-->
+                  <input [(ngModel)]="query" name="query" type="text" class="form-control">
+              <!--</li>
+            </ul>-->
+
+          </div>
+
+          <div class="form-group" style="text-align:end;">
+              <button type="submit" class="btn">Wyszukaj</button>
+            </div>
+        </form>
+  </div>
+  </div>
+
+  <div class="col">
+      <h3>Pasujące przepisy</h3>
+      <div *ngFor="let recipe of recipes">
+        <div class="form-group labelek offset-1 col-10 container">
+          <div class="row">
+              <div class="col potrawa"><h2>{{recipe.name}}</h2></div>
+              <div class="col potrawa-btn"><button (click)="showRecipe(recipe._id)" class="btn">Pokaż</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+

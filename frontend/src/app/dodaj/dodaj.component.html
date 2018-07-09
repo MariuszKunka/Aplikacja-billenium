@@ -1,0 +1,40 @@
+<h1 class="display-4">Dodaj własny przepis</h1>
+
+<div class="form-group" style="text-align:end; margin-right: 8%;">
+    <button type="button" class="btn" (click)="cofnij()">Cofnij</button>
+  </div>
+
+  <div class="col-6 offset-3" style="margin-top:40px; padding:20px; background-color:chocolate; border-radius:15px; border: 2px solid #510000;
+-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
+
+
+  <div class="col-sm-12">
+    <form (ngSubmit)="addRecipe()">
+      <div class="form-group">
+        <label for="">Nazwa potrawy</label>
+        <input [(ngModel)]="name" name="name" type="text" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="">Składniki (wpisywane po przecinku i bez spacji np. składnik 1,składnik 2,składnik 3)</label>
+        <!--<ul>
+          <li style="list-style-type: decimal; color: #510000;">-->
+              <input [(ngModel)]="ingredients" name="ingredients" type="text" class="form-control">
+          <!--</li>
+        </ul>-->
+
+      </div>
+
+      <div class="form-group">
+          <label for="">Sposob przygotowania</label>
+          <textarea [(ngModel)]="description" name="description" type="text" class="form-control"></textarea>
+        </div>
+
+      <div class="form-group" style="text-align:end;">
+        <button type="submit" class="btn">Zapisz przepis</button>
+      </div>
+    </form>
+  </div>
+</div>

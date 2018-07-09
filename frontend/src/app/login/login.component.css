@@ -1,0 +1,15 @@
+.form-control, #exampleInputEmail1, #passwordInput {
+  background-color: #f2ce6a;
+  border: 2px solid #510000;
+  color: #510000;
+}
+
+.btn{
+  margin: 10px;
+  background: #510000;
+  color: #f2ce6a;
+}
+
+label{
+  color: #510000;
+}
